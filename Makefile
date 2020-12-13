@@ -1,6 +1,9 @@
 .ONESHELL:
 SHELL:=/bin/bash
 
+.PHONY: all
+all: book.pdf
+
 book.pdf: book.tex data/*.tex chapters/*/*.tex data/book.bib
 	-pdflatex $<
 	-bibtex book.aux
