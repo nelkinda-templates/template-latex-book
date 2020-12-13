@@ -18,3 +18,7 @@ clean::
 .PHONY: distclean
 distclean:: clean
 	$(RM) *.pdf
+
+.PHONY: view
+view::
+	xdg-open book.pdf
