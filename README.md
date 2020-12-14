@@ -1,6 +1,8 @@
 # template-latex-book
 Template for LaTeX projects, especially books.
 
+To build your PDF from the sources, just run `make`.
+
 ## Features
 * Title page
 * Table of Contents
@@ -12,6 +14,13 @@ Template for LaTeX projects, especially books.
 * Appendix
 * Backmatter with acronyms, glossary, and index
 * Output as PDF, with Hyperlinks
+
+## Example Structure
+* `book.tex` ⇐ main structure, should only be changed for structural changes like adding or removing chapters, or enabling and disabling features
+* `chapters/` ⇐ regular content goes here
+* `data/` ⇐ acronyms, bibliography, glossary
+* `gfx/` ⇐ graphics
+* `src/` ⇐ source code listings included in the book
 
 ## Links
 See also: [LaTeX Cheat Sheet](https://nelkinda.com/blog/latex-cheat-sheet/)
