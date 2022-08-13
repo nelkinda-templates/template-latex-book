@@ -2,11 +2,23 @@
 \usepackage{graphics}
 \usepackage{hyperref}
 \usepackage{listings}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{makeidx}
 \usepackage[acronym,toc]{glossaries}
 \usepackage{longtable}
 \usepackage{todonotes}
+\usepackage{multicol}
+\usepackage{fontspec}
+
+\lstset{
+    basicstyle=\footnotesize \ttfamily,
+    breakatwhitespace=true,
+    breaklines=true,
+    frame=single,
+    keywordstyle=\color{blue},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+}
 
 \makeindex
 \makeglossaries
