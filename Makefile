@@ -1,18 +1,22 @@
 .ONESHELL:
 SHELL:=/bin/bash
 
+LATEX:=lualatex
+#LATEX:=pdflatex
+#LATEX:=xetex
+
 .PHONY: all
 all: book.pdf
 
 book.pdf: book.tex data/*.tex chapters/*/*.tex data/book.bib
-	-pdflatex $<
+	-$(LATEX) $<
 	-bibtex book.aux
 	-makeindex book
 	-makeglossaries book
-	-pdflatex $<
+	-$(LATEX) $<
 	-makeindex book
 	-makeglossaries book
-	pdflatex $<
+	$(LATEX) $<
 
 .PHONY: clean
 clean::
